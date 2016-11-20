@@ -9,6 +9,7 @@
 - **反对称性** $$\forall a \forall b: (a,b) \in R \land (b,a) \in R \to a = b $$ 
 - **传递性**
 - **合成** 
+- 应用于数据库
 
 ## 图
 
