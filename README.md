@@ -3,12 +3,10 @@
 ## 集合
 
 ## 关系
-- 
-- 的的的的的的的的
+- 一个从A到B的二元关系是 $$A \times B$$ 的子集
+- **自反性** $$\forall a \in A: (a,a) \in R$$
 
 ## 图
 
 ## 树
 
-
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
