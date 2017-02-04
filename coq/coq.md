@@ -19,25 +19,36 @@
 - **依赖类型** 把谓词应用到表达式上而获得的类型称为依赖类型
 
 ## 符号表示
-- 环境
-- 上下文
-- 空上下文
-- 声明
-- 声明序列
-- 加入声明
-- 声明的存在性
-- 类型判断
+- 环境 $$E$$
+- 上下文 $$\Gamma$$
+- 空上下文 $$[]$$
+- 声明 $$(v:A)$$
+- 声明序列 $$[v_1:A_1;v_2:A_2;...;v_n:A_n]$$
+- 加入声明 $$\Gamma :: (v:A)$$
+- 声明的存在性 $$(v:A) \in \Gamma$$
+- 类型判断 $$E,\Gamma \vdash t:A$$
 - 替换 2.4.1
 - 规约 2.4.3
 - 可转换 2.4.4
 
-## 推理规则
+## 推理规则（省去部分冗余符号）
 - 标识符 $$\begin{eqnarray}
-    Var \frac{(x:A) \in E \cup \Gamma}{E,\Gamma \vdash x:A}
+    Var \frac{(x:A)}{x:A}
   \end{eqnarray}$$
 
-- 函数作用 App App* 2.2.3 4.2.1
-- 抽象 Lam 2.2.3.2 4.2.2
+- 函数作用 $$\begin{eqnarray}
+  App \frac{e_1:A \rightarrow B \quad  e_2:A}{e_1 \ e_2: B}
+  \end{eqnarray}$$
+    
+- 函数作用 $$\begin{eqnarray}
+  App* \frac{e:A_1 \rightarrow  ... \rightarrow A_n \rightarrow B \quad e_i:A_i}{e \ e_1 \ ... \ e_n:B}
+  \end{eqnarray}$$
+  
+- 抽象 $$\begin{eqnarray}
+    Lam \frac{v:A \quad e:B}{fun \ v:A \Rightarrow e: A \rightarrow B}
+  \end{eqnarray}$$
+    
+- 4.2.2
 - 局部绑定 Let-in 2.2.3.3
 - Prod-Set
 - Prod-Prop
